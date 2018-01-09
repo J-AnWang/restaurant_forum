@@ -1,7 +1,7 @@
-# README
+README
 ========
 
-rails完成餐廳評論網
+Rails完成餐廳評論網
 -----------------
 
 ## Project Goals
@@ -25,10 +25,14 @@ rails完成餐廳評論網
 
 ## 執行時間
 
-### 9/Jan/2018
+##### 9/Jan/2018
 
 - 建立restaurant model
 - 建立前台路口
 - 建立後台路口
 - 使用Devise Gem 建立 user model
+
+##### 9/Jan/2018
+
 - 加入驗證程序以及提示信息
+- 建立後台管理員的程序驗證
