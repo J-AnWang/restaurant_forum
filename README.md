@@ -23,8 +23,9 @@ rails完成餐廳評論網
 
 ##執行時間
 
-###1/Jan/2018
+###9/Jan/2018
 
 -建立restaurant model
 -建立前台路口
 -建立後台路口
+-使用Devise Gem 建立 user model
