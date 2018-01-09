@@ -1,24 +1,22 @@
-# README
+rails完成餐廳評論網
+=================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Project Goals
 
-Things you may want to cover:
+* 前後台設置
 
-* Ruby version
+* 餐廳分類功能
 
-* System dependencies
+* 使用者評論功能
 
-* Configuration
+* 收藏餐廳功能
 
-* Database creation
+* 追蹤達人功能
 
-* Database initialization
+* 建立好友功能
 
-* How to run the test suite
+##執行時間
 
-* Services (job queues, cache servers, search engines, etc.)
+###1/Jan/2018
 
-* Deployment instructions
-
-* ...
+在model中，建立restaurant資料庫
