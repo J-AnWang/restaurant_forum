@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # 使用namespace來把前台後台分開
   namespace :admin do
+    resources :restaurants
     root "restaurants#index"
   end
 end
