@@ -45,3 +45,4 @@ Rails完成餐廳評論網
 - 建立後台的餐廳刪除，編輯，瀏覽功能(destroy &amp; edit &amp; update &amp; show actions and views)
 - 使用CarrierWave Gem 建立照片上傳功能
 - 使用rake編輯指令來產生假資料，並套用FFaker Gem
+- 使用Kaminari Gem 來實現網站分頁功能

@@ -10,4 +10,7 @@
     </li>
   <% end %>
 </ul>
-<%= link_to 'New Restaurant', new_admin_restaurant_path %>
+<div class="paginate">
+  <%= paginate @restaurants %>
+</div>
+<%= link_to 'New Restaurant', new_admin_restaurant_path,class: "button" %>
