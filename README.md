@@ -43,3 +43,4 @@ Rails完成餐廳評論網
 ##### 11/Jan/2018
 
 - 建立後台的餐廳刪除，編輯，瀏覽功能(destroy &amp; edit &amp; update &amp; show actions and views)
+- 使用CarrierWave Gem 建立照片上傳功能
