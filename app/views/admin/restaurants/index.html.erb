@@ -1,1 +1,13 @@
 <h3>後台管理</h3>
+
+<ul class="row">
+  <%@restaurants.each do |r|%>
+    <li class="col-4">
+      <%= r.name %>
+      <%= link_to 'Show', admin_restaurant_path(r) %>
+      <%= link_to 'Edit', edit_admin_restaurant_path(r) %>
+      <%= link_to 'Delete', admin_restaurant_path(r), method: :delete, data: {confirm: "Are you sure?"} %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'New Restaurant', new_admin_restaurant_path %>
