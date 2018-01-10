@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 class="title"><%= @restaurant.name %></h2>
+
+  <div class="info clearfix">
+    <div class="col-4">
+      <i>map</i>
+      <p><%= @restaurant.address %></p>
+    </div>
+    <div class="col-4">
+      <i>phone</i>
+      <p><%= @restaurant.tel %></p>
+    </div>
+    <div class="col-4">
+      <i>door</i>
+      <p><%= @restaurant.opening_hours %></p>
+    </div>
+  </div>
+
+  <div class="description">
+    <h3 class="title">description</h3>
+    <p><%= @restaurant.description %></p>
+  </div>
+
+  <%= link_to "Back to index", admin_restaurants_path, class: "button" %>
+</div>

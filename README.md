@@ -32,10 +32,12 @@ Rails完成餐廳評論網
 - 建立後台路口
 - 使用Devise Gem 建立 user model
 
-##### 9/Jan/2018
+##### 10/Jan/2018
 
 - 加入驗證程序以及提示信息
 - 建立後台管理員的程序驗證
 - 設定後台路由
 - 設定後台restaurant index action and view
-- 建立後台的餐廳新增功能(new @amp; create actions and new view)
+- 建立後台的餐廳新增功能(new &amp; create actions and new view)
+
+##### 11/Jan/2018

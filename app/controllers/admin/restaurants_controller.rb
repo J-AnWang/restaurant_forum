@@ -31,6 +31,10 @@ class Admin::RestaurantsController < ApplicationController
     end
   end
 
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
+
   private
   # params.require().permit(）
   # params 是 request裡的各種資訊之一，包含用戶所有傳進來的參數Hash
