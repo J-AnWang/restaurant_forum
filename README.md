@@ -41,3 +41,5 @@ Rails完成餐廳評論網
 - 建立後台的餐廳新增功能(new &amp; create actions and new view)
 
 ##### 11/Jan/2018
+
+- 建立後台的餐廳刪除，編輯，瀏覽功能(destroy &amp; edit &amp; update &amp; show actions and views)

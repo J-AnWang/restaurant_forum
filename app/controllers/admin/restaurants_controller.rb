@@ -4,7 +4,7 @@ class Admin::RestaurantsController < ApplicationController
   #這使用來判斷使同者是管理員還是一般使用者
   before_action :authenticate_admin
 
-  before_action :set_restaurant, only: [:show, :edit, :update]
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
@@ -43,6 +43,11 @@ class Admin::RestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    @restaurant.destroy
+    flash[:notice] = "restaurant was deleted"
+    redirect_to admin_restaurants_path
+  end
 
   private
   # params.require().permit(）
