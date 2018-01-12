@@ -62,3 +62,4 @@ Rails完成餐廳評論網
 
 - 建立 category model 並在 restaurant model 產生一個 category_id 的外鍵
 - 建立種子資料(Seed)給預設categories, admin user
+- 將 category 與 restaurant 做連結
