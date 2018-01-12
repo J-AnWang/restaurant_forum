@@ -15,7 +15,17 @@ Rails完成餐廳評論網
 
 * 餐廳分類功能
 
+  * 後台：
+    1. 管理者瀏覽餐廳資料時，可以看見餐廳分類
+    2. 管理者在增 ／ 改時，能選擇餐廳分類
+    3. 管理者能在餐廳分類管理表上，進行CRUD
+  * 前台
+    4. 使用者能瀏覽所有餐廳資料，以及餐廳的個別資料
+    5. 使用者可以使用分類功能來選取餐廳
+
 * 使用者評論功能
+
+* 使用者個人資料頁面
 
 * 收藏餐廳功能
 
@@ -46,3 +56,8 @@ Rails完成餐廳評論網
 - 使用CarrierWave Gem 建立照片上傳功能
 - 使用rake編輯指令來產生假資料，並套用FFaker Gem
 - 使用Kaminari Gem 來實現網站分頁功能
+- 安裝bootstrap-sass Gem, jquery-rails Gem以及將 .ccs改為 .scss，但還未進行修飾
+
+##### 12/Jan/2018
+
+- 建立 category model 並在 restaurant model 產生一個 category_id 的外鍵
