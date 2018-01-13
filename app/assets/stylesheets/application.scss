@@ -56,3 +56,33 @@
 .alert {
   text-align: center;
 }
+
+.pagination {
+   > li {
+     > a {
+       border-color: #393939;
+       background-color: #393939;
+       color: #eee;
+       transition: all .3s;
+       &:hover {
+         border-color: #222;
+         background-color: #222;
+         color: #debe68;
+       }
+     }
+   }
+
+  > .active {
+    a {
+      border-color: #aaa;
+      background-color: #aaa;
+      color: #393939;
+      transition: all .3s;
+      &:hover {
+        border-color: #debe68;
+        background-color: #debe68;
+        color: #eee;
+      }
+    }
+  }
+}
