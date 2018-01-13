@@ -1,0 +1,122 @@
+#show {
+  .img-responsive {
+    max-width: 60%;
+  }
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a.button {
+  display: inline-block;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #393939;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: all .3s;
+  &:hover {
+    background-color: #debe68;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  border: none;
+  background-color: #393939;
+  color: #ccc;
+  border-radius: unset;
+  a.navbar-brand {
+    color: #eee;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transition: all .5s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  li > a.admin {
+    float: left;
+    padding: 0 5px;
+    line-height: 45px;
+    color: #eee;
+    transition: all .5s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  .greet {
+    float: left;
+    margin: 0 15px;
+    line-height: 45px;
+    color: #eee;
+  }
+  li > a.nav-a {
+    float: left;
+    padding: 0 5px;
+    color: #eee;
+    line-height: 45px;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  .front-button {
+    &:after {
+      content: "|";
+      padding: 0 10px;
+      line-height: 43px;
+    }
+  }
+}
+
+.alert {
+  text-align: center;
+}
+
+.pagination {
+   > li {
+     > a {
+       border-color: #393939;
+       background-color: #393939;
+       color: #eee;
+       transition: all .3s;
+       &:hover {
+         border-color: #222;
+         background-color: #222;
+         color: #debe68;
+       }
+     }
+   }
+
+  > .active {
+    a {
+      border-color: #aaa;
+      background-color: #aaa;
+      color: #393939;
+      transition: all .3s;
+      &:hover {
+        border-color: #debe68;
+        background-color: #debe68;
+        color: #eee;
+      }
+    }
+  }
+}

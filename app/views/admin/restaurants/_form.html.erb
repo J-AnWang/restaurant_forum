@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="alert_message">
+  <div class="row alert_message">
     <% if @restaurant.errors.any? %>
       <div class="title">
         <h3>You have
@@ -13,32 +13,50 @@
         <% end %>
       </ul>
     <% end %>
-  </div>
+    <!-- 中括號標示 [:admin, @restaurant]，來告訴 Rails 要去 namespace 找到相對應的路徑 -->
+    <%= form_for [:admin, @restaurant] do |f| %>
 
-  <!-- 中括號標示 [:admin, @restaurant]，來告訴 Rails 要去 namespace 找到相對應的路徑 -->
-  <div class="form">
-    <%= form_for [:admin, @restaurant ] do |f| %>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %><br>
+    <div class="form-group">
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
 
-    <%= f.label :tel, "Telephone Number" %>
-    <%= f.text_field :tel %><br>
+    <div class="form-group">
+      <%= f.label :tel, "Tel" %>
+      <%= f.text_field :tel, class: "form-control" %>
+    </div>
 
-    <%= f.label :address, "Address" %>
-    <%= f.text_field :address %><br>
+    <div class="form-group">
+      <%= f.label :address, "Address" %>
+      <%= f.text_field :address, class: "form-control" %>
+    </div>
 
-    <%= f.label :opening_hours, "Opening Hours" %>
-    <%= f.text_field :opening_hours %><br>
+    <div class="form-group">
+      <%= f.label :opening_hours, "Opening Hours" %>
+      <%= f.text_field :opening_hours, class: "form-control" %>
+    </div>
 
-    <%= f.label :description, "Description" %>
-    <%= f.text_area :description %><br>
+    <div class="form-group">
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
 
-    <%= f.label :image, "Photo" %>
-    <%= image_tag @restaurant.image, width: '300px' if @restaurant.image? %>
-    <%= f.file_field :image %><br>
-
-    <%= f.submit %>
+    <div class="form-group">
+      <%= f.label :image, "Photo" %>
+      <%= image_tag @restaurant.image, width: '300px' if @restaurant.image? %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-xs-12">
+        <%= f.submit button, class: "button"%>
+      </div>
     <% end %>
-  </div>
-  <%= link_to "Back to index", admin_restaurants_path, class: "button" %>
+    <div class="col-md-3 col-xs-12">
+      <%= link_to "Back to index", admin_restaurants_path, class: "button" %>
+    </div>
+    </div>
+
+
+  <div class="clearfix"></div>
+</div>
 </div>

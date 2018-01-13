@@ -66,4 +66,5 @@ Rails完成餐廳評論網
 
 ##### 13/Jan/2018
 
-- 重新產生一筆有category_id的資料
+- 重新產生一筆有category_id的假資料
+- 對網頁做一些基本的裝飾，套入boostrap3, 自訂 scss

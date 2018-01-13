@@ -1,25 +1,37 @@
-<div class="container">
-  <h2 class="title"><%= @restaurant.name %></h2>
-  <%= image_tag @restaurant.image, width: '600px' %>
-  <div class="info clearfix">
-    <div class="col-4">
-      <i>map</i>
-      <p><%= @restaurant.address %></p>
-    </div>
-    <div class="col-4">
-      <i>phone</i>
-      <p><%= @restaurant.tel %></p>
-    </div>
-    <div class="col-4">
-      <i>door</i>
-      <p><%= @restaurant.opening_hours %></p>
+<div id="show">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 title">
+        <h1><%= @restaurant.name %></h1>
+      </div>
+      <div>
+        <%= image_tag @restaurant.image, class: "img-responsive center-block" %>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <div class="well">
+          <ul class="list-unstyled">
+            <li>
+              <strong>Opening Hour:</strong>
+              <%= @restaurant.opening_hours %></li>
+            <li>
+              <strong>Tel:</strong>
+              <%= @restaurant.tel %></li>
+            <li>
+              <strong>Address:</strong>
+              <%= @restaurant.address %></li>
+          </ul>
+      </div>
+      <div class="col-md-8">
+        <%= simple_format @restaurant.description %>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="col-md-3 col-xs-12">
+        <%= link_to "Back to index", admin_restaurants_path, class: "button" %>
+      </div>
+      <div class="clearfix"></div>
+      <hr>
     </div>
   </div>
-
-  <div class="description">
-    <h3 class="title">description</h3>
-    <p><%= @restaurant.description %></p>
-  </div>
-
-  <%= link_to "Back to index", admin_restaurants_path, class: "button" %>
 </div>
