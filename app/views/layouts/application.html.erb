@@ -9,10 +9,6 @@
   </head>
 
   <body>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -22,24 +18,59 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">餐廳評論網</a>
+          <%= link_to "餐廳評論網", root_path, class: "navbar-brand" %>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="pull-right text-right nav navbar-nav">
-              <% if current_user %>
-                Hi,
-                <%= current_user.email %>
-                <%= link_to('登出', destroy_user_session_path, method: :delete) %>
-                <%= link_to('修改密碼', edit_user_registration_path) %>
-              <% else %>
-                <%= link_to('註冊', new_user_registration_path) %>
-                |
-                <%= link_to('登入', new_user_session_path) %>
+          <ul class="pull-right text-right nav navbar-nav">
+            <% if current_user %>
+              <% if current_user.admin? %>
+                <li><%= link_to 'Admin後台', admin_restaurants_path, class: "admin button"%></li>
               <% end %>
-            </ul>
+              <li class="greet">
+                Hi,<%= current_user.email %>
+              </li>
+              <li class="front-button">
+                <%= link_to '登出', destroy_user_session_path, method: :delete, class: "nav-a" %>
+              </li>
+              <li>
+                <%= link_to '修改密碼', edit_user_registration_path, class: "nav-a" %>
+              </li>
+            <% else %>
+              <li class="front-button">
+                <%= link_to '註冊', new_user_registration_path, class: "nav-a" %>
+              </li>
+              <li>
+                <%= link_to '登入', new_user_session_path, class: "nav-a" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <% if flash[:notice] %>
+      <div class="container">
+        <div class="row">
+          <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <%= notice %>
           </div>
         </div>
-      </nav>
-      <%= yield %>
-    </body>
-  </html>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="container">
+        <div class="row">
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <%= alert %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

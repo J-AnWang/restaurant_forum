@@ -1,2 +1,58 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.navbar {
+  border: none;
+  background-color: #393939;
+  color: #ccc;
+  border-radius: unset;
+  a.navbar-brand {
+    color: #eee;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transition: all .5s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  li > a.admin {
+    float: left;
+    padding: 0 5px;
+    line-height: 45px;
+    color: #eee;
+    transition: all .5s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  .greet {
+    float: left;
+    margin: 0 15px;
+    line-height: 45px;
+    color: #eee;
+  }
+  li > a.nav-a {
+    float: left;
+    padding: 0 5px;
+    color: #eee;
+    line-height: 45px;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  .front-button {
+    &:after {
+      content: "|";
+      padding: 0 10px;
+      line-height: 43px;
+    }
+  }
+}
+
+.alert {
+  text-align: center;
+}
