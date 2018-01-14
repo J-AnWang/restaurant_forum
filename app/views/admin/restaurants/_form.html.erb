@@ -16,6 +16,11 @@
     <!-- 中括號標示 [:admin, @restaurant]，來告訴 Rails 要去 namespace 找到相對應的路徑 -->
     <%= form_for [:admin, @restaurant] do |f| %>
 
+    <div class="form_group">
+      <%= f.label :category_id, "Category" %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, {class: "form-control"} %>
+    </div>
+
     <div class="form-group">
       <%= f.label :name, "Name" %>
       <%= f.text_field :name, class: "form-control" %>

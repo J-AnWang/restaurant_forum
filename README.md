@@ -79,3 +79,7 @@ Rails完成餐廳評論網
 ##### 14/Jan/2018
 
 - 加入分類到後台的index and show views
+
+##### 15/Jan/2018
+
+- 加入選擇分類功能到 edit, view 頁面裡

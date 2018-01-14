@@ -55,7 +55,7 @@ class Admin::RestaurantsController < ApplicationController
   # require(:object_name) 是取出 restaurant 這 table 的資料
   # permit 只允許指定資料放入model
   def restaurant_params
-    params.require(:restaurant).permit(:name, :tel, :address, :opening_hours, :description, :image)
+    params.require(:restaurant).permit(:name, :tel, :address, :opening_hours, :description, :image, :category_id)
   end
   # 用來縮減程式碼，所以將到資料庫查找資料的動作設成function，方便共同呼叫
   def set_restaurant
