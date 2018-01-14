@@ -83,3 +83,4 @@ Rails完成餐廳評論網
 ##### 15/Jan/2018
 
 - 加入選擇分類功能到 edit, view 頁面裡
+- 設定category的route
