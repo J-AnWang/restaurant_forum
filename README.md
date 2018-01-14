@@ -75,3 +75,7 @@ Rails完成餐廳評論網
 
 - 重新產生一筆有category_id的假資料
 - 對網頁做一些基本的裝飾，套入boostrap3, 自訂 scss
+
+##### 14/Jan/2018
+
+- 加入分類到後台的index and show views
