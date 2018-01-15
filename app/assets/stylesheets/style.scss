@@ -1,4 +1,7 @@
 // custom
+body, html {
+   height:100%;
+}
 a {
   padding: 0 10px;
   color: #393939;
@@ -10,7 +13,6 @@ a {
     text-decoration: none;
   }
 }
-
 th, td {
   text-align: center;
   a {
@@ -24,17 +26,15 @@ th, td {
     }
   }
 }
-
 .title {
+  margin-bottom: 50px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 a.button {
   display: inline-block;
 }
-
 .button {
   width: 100%;
   height: 100%;
@@ -56,7 +56,6 @@ a.button {
     text-decoration: none;
   }
 }
-
 .navbar {
   border: none;
   background-color: #393939;
@@ -107,11 +106,9 @@ a.button {
     }
   }
 }
-
 .alert {
   text-align: center;
 }
-
 .pagination {
    > li {
      > a {
@@ -141,7 +138,6 @@ a.button {
     }
   }
 }
-
 .right {
   float: right;
   width: 25%;
@@ -165,9 +161,21 @@ a.button {
     }
   }
 }
+.restaurant-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+.restaurant-item img {
+  max-height: 180px;
+  width: 100%;
+}
+.restaurant-item .caption {
+  padding: 10px;
+}
 
 //admin index view
-
 #admin-index {
   .col-md-12 {
     padding: 0;
@@ -176,18 +184,15 @@ a.button {
     width: 20%;
   }
 }
-
 // admin show
-
 #show {
   .img-responsive {
     max-width: 60%;
   }
 }
-
 // admin catgory index
-
 #category {
+  padding-bottom: 285px;
   .col-md-4 {
     padding-right: 0;
   }
@@ -208,4 +213,28 @@ a.button {
     margin-left: 5px;
   }
 
+}
+//footer
+#footer {
+    width: 100%;
+    padding: 50px 0;
+    background: #393939;
+    .copyright {
+        float: left;
+        .title {
+            margin: 0;
+            color: #eee;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        .subtitle {
+            color: #eee;
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            text-transform: capitalize;
+        }
+    }
 }
