@@ -1,7 +1,4 @@
-class Admin::CategoriesController < ApplicationController
-  # 驗證該 User 身份是否為網站管理員
-  before_action :authenticate_admin
-
+class Admin::CategoriesController < Admin::BaseController
   before_action :set_category, only: [:update, :destroy]
 
   def index

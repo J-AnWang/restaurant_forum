@@ -1,7 +1,4 @@
-class Admin::RestaurantsController < ApplicationController
-  #這使用來判斷使同者是管理員還是一般使用者
-  before_action :authenticate_admin
-
+class Admin::RestaurantsController < Admin::BaseController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def index
