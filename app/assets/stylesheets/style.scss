@@ -1,8 +1,4 @@
-#show {
-  .img-responsive {
-    max-width: 60%;
-  }
-}
+// custom
 
 .title {
   text-align: center;
@@ -118,5 +114,43 @@ a.button {
         color: #eee;
       }
     }
+  }
+}
+
+.right {
+  float: right;
+  a {
+    color: #7e7e7e;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s;
+    &:hover {
+      color: #debe68;
+    }
+  }
+  a.front-a {
+    &:after {
+      content: "|";
+      padding: 0 5px;
+      color: #7e7e7e;
+      line-height: 43px;
+    }
+  }
+}
+
+//admin-index view
+
+#admin-index {
+  .col-md-12 {
+    padding: 0;
+  }
+}
+
+// admin-show
+
+#show {
+  .img-responsive {
+    max-width: 60%;
   }
 }
