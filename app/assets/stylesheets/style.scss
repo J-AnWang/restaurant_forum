@@ -32,13 +32,6 @@ a.button {
   }
 }
 
-.small {
-  width: 50%;
-  height: 34px;
-  padding: 0px;
-  margin-left: 5px;
-}
-
 .navbar {
   border: none;
   background-color: #393939;
@@ -154,6 +147,9 @@ a.button {
   .col-md-12 {
     padding: 0;
   }
+  .small {
+    width: 20%;
+  }
 }
 
 // admin show
@@ -180,4 +176,11 @@ a.button {
   .new_category {
     position: relative;
   }
+  .small {
+    width: 50%;
+    height: 34px;
+    padding: 0px;
+    margin-left: 5px;
+  }
+
 }
