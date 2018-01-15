@@ -87,3 +87,4 @@ Rails完成餐廳評論網
 - 加入category index 後台頁面
 - 加入新增,編,刪除功能在category index 頁面
 - 重構categories controller 以及所有controller， 並新建 Admin::BaseController為admin controllers的共用controller
+- 建立前台routes only for show and index
