@@ -32,6 +32,13 @@ a.button {
   }
 }
 
+.small {
+  width: 50%;
+  height: 34px;
+  padding: 0px;
+  margin-left: 5px;
+}
+
 .navbar {
   border: none;
   background-color: #393939;
@@ -119,6 +126,8 @@ a.button {
 
 .right {
   float: right;
+  width: 25%;
+  text-align: center;
   a {
     color: #7e7e7e;
     text-decoration: none;
@@ -139,7 +148,7 @@ a.button {
   }
 }
 
-//admin-index view
+//admin index view
 
 #admin-index {
   .col-md-12 {
@@ -147,10 +156,28 @@ a.button {
   }
 }
 
-// admin-show
+// admin show
 
 #show {
   .img-responsive {
     max-width: 60%;
+  }
+}
+
+// admin catgory index
+
+#category {
+  .col-md-4 {
+    padding-right: 0;
+  }
+  .col-md-2 {
+    padding-left: 0;
+  }
+  .pos {
+    position: absolute;
+    bottom: 0;
+  }
+  .new_category {
+    position: relative;
   }
 }
