@@ -86,3 +86,4 @@ Rails完成餐廳評論網
 - 設定category的route以及建立controller，並在內加入登入和管理員身分驗證
 - 加入category index 後台頁面
 - 加入新增,編,刪除功能在category index 頁面
+- 重構categories controller
