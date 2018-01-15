@@ -1,4 +1,19 @@
 // custom
+a {
+  padding: 0 10px;
+  color: #393939;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all .3s;
+  &:hover {
+    color: #debe68;
+    text-decoration: none;
+  }
+}
+
+th, td {
+  text-align: center;
+}
 
 .title {
   text-align: center;
