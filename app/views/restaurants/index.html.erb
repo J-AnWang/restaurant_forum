@@ -1,6 +1,13 @@
-<div class="container">
+<div id="root"class="container">
   <div class="row">
     <h1 class="title">前台網站</h1>
+    <ul class="center">
+      <li><%= link_to "全部分類", root_path, class: "option active" %></li>
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category), class: "option"%></li>
+      <% end %>
+      <div class="clearfix"></div>
+    </ul>
     <hr>
     <% @restaurants.each do |restaurant| %>
       <div class="col-sm-6 col-md-4">

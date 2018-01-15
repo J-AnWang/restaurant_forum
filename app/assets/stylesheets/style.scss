@@ -1,4 +1,12 @@
 // custom
+* {
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 body, html {
    height:100%;
 }
@@ -175,6 +183,38 @@ a.button {
   padding: 10px;
 }
 
+
+//root
+#root {
+  .center {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  li{
+    float: left;
+    .option {
+      margin: 0 15px;
+      padding: 10px 10px;
+      border-radius: 5px;
+      color: #393939;
+      background-color: #eee;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: all .3s;
+      &:hover {
+        color: #debe68;
+        background-color: #393939;
+        text-decoration: none;
+      }
+      &.active {
+        color: #debe68;
+        background-color: #393939;
+        text-decoration: none;
+      }
+    }
+  }
+}
 //admin index view
 #admin-index {
   .col-md-12 {
