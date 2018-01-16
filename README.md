@@ -93,3 +93,4 @@ Rails完成餐廳評論網
 
 - 建立前台restaurant view的頁面,加入footer
 - 建立前台show 頁面
+- 建立依分類瀏覽餐廳的功能

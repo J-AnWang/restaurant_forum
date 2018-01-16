@@ -10,17 +10,17 @@ ul {
 body, html {
    height:100%;
 }
-a {
-  padding: 0 10px;
-  color: #393939;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all .3s;
-  &:hover {
-    color: #debe68;
-    text-decoration: none;
-  }
-}
+// a {
+//   padding: 0 10px;
+//   color: #393939;
+//   text-decoration: none;
+//   letter-spacing: 1px;
+//   transition: all .3s;
+//   &:hover {
+//     color: #debe68;
+//     text-decoration: none;
+//   }
+// }
 th, td {
   text-align: center;
   a {
@@ -193,7 +193,9 @@ a.button {
   }
   li{
     float: left;
-    .option {
+  }
+  .option {
+    a{
       margin: 0 15px;
       padding: 10px 10px;
       border-radius: 5px;
@@ -207,7 +209,9 @@ a.button {
         background-color: #393939;
         text-decoration: none;
       }
-      &.active {
+    }
+    &.active {
+      a {
         color: #debe68;
         background-color: #393939;
         text-decoration: none;
