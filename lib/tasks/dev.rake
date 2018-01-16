@@ -9,7 +9,8 @@ namespace :dev do
         tel: FFaker::PhoneNumber.short_phone_number,
         address: FFaker::Address.street_address,
         description: FFaker::Lorem.paragraph,
-        category_id: Category.all.sample.id
+        category_id: Category.all.sample.id,
+        image: File.open(File.join(Rails.root, "/public/seed_img/#{rand(0..20)}.jpg"))
       )
     end
     # 利用 puts 撰寫提示訊息，幫助標示任務執行完畢
