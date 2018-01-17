@@ -237,8 +237,20 @@ a.button {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
+  .delete {
+    a {
+      padding: 0 10px;
+      color: #ccc;
+      &:hover {
+        color: #debe68;
+      }
+    }
+  }
   .img-responsive {
     max-width: 60%;
+  }
+  .text_muted {
+    float: left;
   }
 }
 // admin catgory index
