@@ -106,3 +106,7 @@ _ 建立comment routes 以及comments controller
 - 建立comment create action
 - 建立comment 瀏覽功能
 - 建立comment 刪除功能，只有管理者可以使用
+
+##### 18/Jan/2018
+
+- 建立新的的dev.rake的內容來產生假的user以及comment 資料
