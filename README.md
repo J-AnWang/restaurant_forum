@@ -104,3 +104,4 @@ Rails完成餐廳評論網
 - 建立comment model 並與restaurant以及user建立關聯
 _ 建立comment routes 以及comments controller
 - 建立comment create action
+- 建立comment 瀏覽功能

@@ -35,7 +35,20 @@
       </div>
       <div class="clearfix"></div>
       <hr>
+      <!-- 留言顯示區 -->
+      <% @restaurant.comments.each do |comment| %>
+        <div>
+          <h4><%= comment.user.email.split("@").first %></h4>
+          <p><%= comment.content %></p>
+          <p class="text_muted">
+            <em><%= time_ago_in_words(comment.created_at) %> ago</em>
+          </p>
+        </div>
 
+        <hr>
+      <% end %>
+
+      <!-- 留言功能 -->
       <%= form_for [@restaurant, @comment] do |f| %>
       <div class="form-group">
         <%= f.text_area :content, placeholder: "留個言吧", class: "form-control"%>

@@ -233,6 +233,10 @@ a.button {
 }
 // admin show
 #show {
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
   .img-responsive {
     max-width: 60%;
   }
