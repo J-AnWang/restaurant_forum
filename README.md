@@ -102,3 +102,4 @@ Rails完成餐廳評論網
 ##### 17/Jan/2018
 
 - 建立comment model 並與restaurant以及user建立關聯
+_ 建立comment routes 以及comments controller
