@@ -38,6 +38,10 @@ Rails完成餐廳評論網
 
 * 使用者個人資料頁面
 
+  1.使用者可以瀏覽自己的和他人的Profile
+  2.使用者可以編輯他人的資料，但不許編輯他人的
+  3.在Profile頁面下，可以瀏覽他人評論過的餐廳
+
 * 收藏餐廳功能
 
 * 追蹤達人功能
@@ -110,3 +114,5 @@ _ 建立comment routes 以及comments controller
 ##### 18/Jan/2018
 
 - 建立新的的dev.rake的內容來產生假的user以及comment 資料
+- 建立user route 給 profile功能使用
+- 在nav bar上，加上profile 的連結
