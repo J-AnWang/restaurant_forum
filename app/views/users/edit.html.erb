@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row alert_message">
+    <% if @user.errors.any? %>
+      <div class="title">
+        <h3>You have
+          <%= pluralize(@user.errors.count, "error") %></h3>
+      </div>
+      <ul>
+        <% @user.errors.full_messages.each do |msg|%>
+          <li>
+            <%= msg%>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <!-- 中括號標示 [:admin, @user]，來告訴 Rails 要去 namespace 找到相對應的路徑 -->
+    <h1 class="title">編輯個人資料</h1>
+    <%= form_for @user do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :intro, "Intro" %>
+      <%= f.text_area :intro, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :avatar, "Avatar" %>
+      <% for img_id in 0..20 %>
+        <% if image_path(@user.avatar).include? ('/'+img_id.to_s+'.jpg') %>
+          <%= image_tag('/seed_img/'+img_id.to_s+'.jpg', class: "img-responsive center-block") if @user.avatar?%>
+        <% end %>
+      <% end %>
+      <%= f.file_field :avatar %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <%= f.submit "Update", class: "button"%>
+        <%= f.button "Cancel", type: :reset, class: "button" %>
+        <%= link_to "Back To Profile", user_path(@user), class: "button" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="clearfix"></div>
+  <hr>
+</div>
+</div>

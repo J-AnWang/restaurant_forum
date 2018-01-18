@@ -119,3 +119,4 @@ _ 建立comment routes 以及comments controller
 - 新增name, intro, avatar三個column進入user model
 - 建立users controller
 - 建立profile show page
+- 建立profile edit page以及 user update action
