@@ -29,11 +29,7 @@
 
     <div class="form-group">
       <%= f.label :avatar, "Avatar" %>
-      <% for img_id in 0..20 %>
-        <% if image_path(@user.avatar).include? ('/'+img_id.to_s+'.jpg') %>
-          <%= image_tag('/seed_img/'+img_id.to_s+'.jpg', class: "img-responsive center-block") if @user.avatar?%>
-        <% end %>
-      <% end %>
+      <%= image_tag @user.avatar, if @user.avatar?%>
       <%= f.file_field :avatar %>
     </div>
 
