@@ -123,3 +123,4 @@ _ 建立comment routes 以及comments controller
 - 建立大頭照上傳功能
 - 自訂registration form
 - 加入name 到 fake data, seed data
+- 顯示user name屬性出現在留言區，並能透過點擊那麼屬性來到他人的profile頁面

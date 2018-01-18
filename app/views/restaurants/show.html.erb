@@ -42,7 +42,7 @@
       <!-- 留言顯示區 -->
       <% @restaurant.comments.each do |comment| %>
         <div>
-          <h4><%= comment.user.email.split("@").first %></h4>
+          <h4><%= link_to comment.user.name, user_path(comment.user) %></h4>
           <p><%= comment.content %></p>
           <p class="text_muted">
             <em><%= time_ago_in_words(comment.created_at) %>
