@@ -117,3 +117,4 @@ _ 建立comment routes 以及comments controller
 - 建立user route 給 profile功能使用
 - 在nav bar上，加上profile 的連結
 - 新增name, intro, avatar三個column進入user model
+- 建立users controller
