@@ -280,10 +280,10 @@ a.button {
 //profile show
 #profile-show {
   hr {
-    margin-bottom: 250px;
+    margin-bottom: 150px;
   }
   .profile {
-    margin-top: 250px;
+    margin-top: 150px;
   }
   .title {
     margin: 0;
@@ -292,6 +292,21 @@ a.button {
   .button {
     margin-top: 10px;
   }
+}
+// register
+#regist {
+  margin-top: 170px;
+  margin-bottom: 170px;
+}
+// login
+#login {
+  margin-top: 210px;
+  margin-bottom: 220px;
+}
+// edit user
+#edit-user {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 //footer
 #footer {
