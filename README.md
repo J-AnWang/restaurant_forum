@@ -121,3 +121,4 @@ _ 建立comment routes 以及comments controller
 - 建立profile show page
 - 建立profile edit page以及 user update action
 - 建立大頭照上傳功能
+- 自訂registration form
