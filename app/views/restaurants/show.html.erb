@@ -5,7 +5,11 @@
         <h1><%= @restaurant.name %></h1>
       </div>
       <div>
-        <%= image_tag @restaurant.image, class: "img-responsive center-block" %>
+        <% for img_id in 0..20 %>
+          <% if image_path(@restaurant.image).include? ('/'+img_id.to_s+'.jpg') %>
+            <%= image_tag('/seed_img/'+img_id.to_s+'.jpg', class: "img-responsive center-block") %>
+          <% end %>
+        <% end %>
       </div>
       <div class="clearfix"></div>
       <br>
