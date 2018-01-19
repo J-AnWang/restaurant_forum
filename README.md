@@ -128,3 +128,4 @@ _ 建立comment routes 以及comments controller
 ##### 19/Jan/2018
 
 - 建立評論過的餐廳資料彙整，呈現在user profile 頁面
+- styled profile page

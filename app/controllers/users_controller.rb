@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
   def show
-    @commented_restaurant = @user.restaurants
-    @commented_restaurant = @commented_restaurant.uniq
+    @commented_restaurant = @user.restaurants.uniq
   end
 
   def edit
