@@ -11,8 +11,7 @@ namespace :dev do
         address: FFaker::Address.street_address,
         description: FFaker::Lorem.paragraph,
         category_id: Category.all.sample.id,
-        image: File.open(File.join(Rails.root, "/public/seed_img/#{rand(0..20)}.jpg"))
-      )
+        image: File.open(File.join(Rails.root, "/public/seed_img/#{rand(0..20)}.jpg")))
     end
     # 利用 puts 撰寫提示訊息，幫助標示任務執行完畢
     puts "have created fake restaurants"
@@ -32,8 +31,8 @@ namespace :dev do
       User.create!(
         name: "#{user_name}",
         email: "#{user_name}@example.com",
-        password: "12345678"
-      )
+        password: "12345678",
+        avatar: File.open(File.join(Rails.root, "/public/seed_img/#{rand(0..5)}.png")))
     end
 
     puts "have created fake users"
