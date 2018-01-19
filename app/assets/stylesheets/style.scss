@@ -280,7 +280,7 @@ a.button {
 //profile show
 #profile-show {
   hr {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   .profile {
     margin-top: 150px;
@@ -291,6 +291,20 @@ a.button {
   }
   .button {
     margin-top: 10px;
+  }
+  .panel-heading {
+    background-color: #393939;
+    color: #ccc;
+  }
+  .my-restaurant {
+    float: left;
+    padding: 0 10px;
+    display: inline-block;
+    text-align: center;
+    img {
+      width: 100px;
+      height: 60px;
+    }
   }
 }
 // register
