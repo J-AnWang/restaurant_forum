@@ -124,3 +124,7 @@ _ 建立comment routes 以及comments controller
 - 自訂registration form
 - 加入name 到 fake data, seed data
 - 顯示user name屬性出現在留言區，並能透過點擊那麼屬性來到他人的profile頁面
+
+##### 19/Jan/2018
+
+- 建立評論過的餐廳資料彙整，呈現在user profile 頁面

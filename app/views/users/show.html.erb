@@ -23,5 +23,26 @@
       <div class="clearfix"></div>
     </div>
     <hr>
+    <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @commented_restaurant.count %>已評論過的餐廳</h3>
+  </div>
+  <div class="panel-body">
+    <% @commented_restaurant.each do |restaurant| %>
+
+    <div class="my-restaurant">
+      <%= link_to restaurant_path(restaurant) do %>
+        <% for img_id in 0..20 %>
+          <% if image_path(restaurant.image).include? ('/'+img_id.to_s+'.jpg') %>
+            <%= image_tag('/seed_img/'+img_id.to_s+'.jpg', class: "img-responsive center-block img-rounded") %>
+          <% end %>
+        <% end %>
+        <strong><%= restaurant.name %></strong>
+      <% end %>
+    </div>
+
+    <% end %>
+  </div>
+</div>
   </div>
 </div>
