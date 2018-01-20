@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :email
   mount_uploader :avatar, AvatarUploader
 
-  has_many :comments
+  has_many :comments, dependent: :restrict_with_error
   has_many :restaurants , through: :comments
 
   # 此method是從model中取出登入instance role的值來判斷是否為admin
