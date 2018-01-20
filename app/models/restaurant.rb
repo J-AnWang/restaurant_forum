@@ -5,5 +5,5 @@ class Restaurant < ApplicationRecord
   # 注意！設定 belongs_to 時，後面接的參數為單數
   # 允許「未分類」的 Restaurant 資料，你就需要在 belongs_to 的宣告後，加上 optional: true 的設定
   belongs_to :category
-has_many :comments, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
