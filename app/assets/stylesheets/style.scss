@@ -338,6 +338,27 @@ a.button {
     }
   }
 }
+// Dashboard
+#dashboard {
+  ul {
+    margin: 100px auto 200px;
+    li {
+      padding: 0 30%;
+      line-height: 30px;
+      letter-spacing: 2px;
+      font-size: 18px;
+      &:before {
+        content: "-";
+        padding-right: 10px;
+      }
+    }
+  }
+  .button {
+    display: block;
+    width: 30%;
+    margin: 0 auto 20px;
+  }
+}
 // register
 #regist {
   margin-top: 170px;

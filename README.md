@@ -130,7 +130,11 @@ _ 建立comment routes 以及comments controller
 - 建立評論過的餐廳資料彙整，呈現在user profile 頁面
 - styled profile page
 - 加入 avatar 進入 dev.rake, seed
+
+##### 20/Jan/2018
+
 - 建立dashboard, feeds routes
-- 建立 feeds view 及 action
+- 在restaurant index 加入feeds view 及 action
 - 建立資料庫 dependency
 - 在categories page 加入刪除已有餐廳的category的警告
+- 在restaurant show page 加入dashboard 功能

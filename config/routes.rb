@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     member do
       get :dashboard
     end
+    
   end
   resources :categories, only: :show
   root "restaurants#index"
