@@ -131,3 +131,4 @@ _ 建立comment routes 以及comments controller
 - styled profile page
 - 加入 avatar 進入 dev.rake, seed
 - 建立dashboard, feeds routes
+- 建立 feeds view 及 action 

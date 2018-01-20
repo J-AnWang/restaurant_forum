@@ -185,14 +185,22 @@ a.button {
 .restaurant-item .caption {
   padding: 10px;
 }
+.panel-default > .panel-heading {
+  background-color: #393939;
+  color: #ccc;
+  letter-spacing: 2px;
+}
 
 
 //root
 #root {
+  .nav-tabs {
+    margin-bottom: 40px;
+  }
   .center {
     text-align: center;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
   li{
     float: left;
@@ -292,10 +300,6 @@ a.button {
   .button {
     margin-top: 10px;
   }
-  .panel-heading {
-    background-color: #393939;
-    color: #ccc;
-  }
   .my-restaurant {
     float: left;
     padding: 0 10px;
@@ -304,6 +308,33 @@ a.button {
     img {
       width: 100px;
       height: 60px;
+    }
+  }
+}
+//feeds
+#feeds {
+  hr {
+    margin: 10px 0;
+  }
+  p {
+    color: #7e7e7e;
+  }
+  .panel {
+    a {
+      padding: 0;
+    }
+  }
+  .info {
+    float: left;
+    margin-bottom: 10px;
+    .title {
+      display: inline-block;
+      margin: 0;
+      text-align: left;
+    }
+    .subtitle {
+      display: inline-block;
+      margin-left: 5px;
     }
   }
 }

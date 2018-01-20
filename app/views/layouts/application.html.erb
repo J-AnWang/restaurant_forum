@@ -27,7 +27,7 @@
                 <li><%= link_to 'Admin後台', admin_restaurants_path, class: "admin"%></li>
               <% end %>
               <li class="greet">
-                Hi,<%= current_user.email %>
+                Hi, <%= current_user.name %>
               </li>
               <li>
                 <%= link_to "Profile", user_path(current_user), class: "nav-a"%>
