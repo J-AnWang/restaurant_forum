@@ -130,3 +130,4 @@ _ 建立comment routes 以及comments controller
 - 建立評論過的餐廳資料彙整，呈現在user profile 頁面
 - styled profile page
 - 加入 avatar 進入 dev.rake, seed
+- 建立dashboard, feeds routes
