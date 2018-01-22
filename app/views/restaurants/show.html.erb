@@ -39,8 +39,7 @@
         <%= link_to "Back to index", restaurants_path, class: "button" %>
       </div>
       <div class="col-md-4 col-xs-12">
-        <%= link_to "Favorite", favorite_restaurant_path(@restaurant), method: :post, class: "btn btn-primary" %>
-        <%= link_to "Unfavorite", unfavorite_restaurant_path(@restaurant), method: :post, class: "btn btn-info" %>
+        <%= render partial: "shared/favorite", locals: { restaurant: @restaurant } %>
       </div>
       <div class="clearfix"></div>
       <hr>
