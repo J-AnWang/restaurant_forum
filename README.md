@@ -44,6 +44,9 @@ Rails完成餐廳評論網
 
 * 收藏餐廳功能
 
+  1.使用者可以收藏餐廳
+  2.使用者可以取消收藏餐廳
+
 * 追蹤達人功能
 
 * 建立好友功能
@@ -138,3 +141,8 @@ _ 建立comment routes 以及comments controller
 - 建立資料庫 dependency
 - 在categories page 加入刪除已有餐廳的category的警告
 - 在restaurant show page 加入dashboard 功能
+
+##### 22/Jan/2018
+
+- 建立favorite model
+- 設定user, restaurant, favorite的多對多的關係
