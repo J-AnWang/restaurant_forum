@@ -147,3 +147,4 @@ _ 建立comment routes 以及comments controller
 - 建立favorite model
 - 設定user, restaurant, favorite的多對多的關係
 - 設定favorite, unfavorite routes 在restaurant下
+- 建立favorite, unfavorite action 在 restaurant controller裡

@@ -67,6 +67,14 @@ a.button {
     text-decoration: none;
   }
 }
+.btn {
+  height: 100%;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
 .navbar {
   border: none;
   background-color: #393939;
@@ -259,6 +267,10 @@ a.button {
   }
   .text_muted {
     float: left;
+  }
+  .btn{
+    float: right;
+    margin-left: 10px;
   }
 }
 // admin catgory index
