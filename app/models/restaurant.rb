@@ -21,4 +21,12 @@ class Restaurant < ApplicationRecord
     self.liked_users.include?(user)
   end
 
+  # 用來計算favorites_count class method
+  # def self.count_favorites
+  #   Restaurant.all.each do |restaurant|
+  #     restaurant.favorites_count = restaurant.favorites.count
+  #     restaurant.save
+  #   end
+  # end
+
 end
