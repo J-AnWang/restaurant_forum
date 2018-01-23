@@ -157,3 +157,4 @@ _ 建立comment routes 以及comments controller
 - 設定ranking route
 - 新增欄位favorites_count 進入 restaurants table
 - 在 restaurant model 裡新增計算收藏數的方法, 並在 restaurant controller action 做呼叫
+- 建立TOP10 人氣餐廳的頁面並修飾

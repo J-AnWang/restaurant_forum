@@ -68,10 +68,11 @@ a.button {
   }
 }
 .btn {
+  display: inline-block;
   height: 100%;
-  margin-bottom: 10px;
   padding: 10px;
   font-size: 15px;
+  vertical-align: baseline;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -370,6 +371,44 @@ a.button {
     display: block;
     width: 30%;
     margin: 0 auto 20px;
+  }
+}
+// favorite
+#favorite {
+  hr {
+    margin: 0;
+  }
+  .title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+    span {
+      margin-left: 30px;
+      font-size: 18px;
+      color: #7e7e7e;
+    }
+  }
+  .small-title {
+    margin-top: 30px;
+    a {
+      padding: 0;
+    }
+  }
+  .subtitle {
+    width: 10%;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #393939;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .content {
+    margin-bottom: 40px;
+  }
+  .img {
+    float: left;
+    margin: 0;
+    width: 20%;
   }
 }
 // register

@@ -1,4 +1,4 @@
-<div id="feeds" class="container">
+<div id="favorite" class="container">
   <div class="row">
     <ul class="nav nav-tabs">
       <li role="presentation">
@@ -11,22 +11,27 @@
         <%= link_to "Top10人氣餐廳", ranking_restaurants_path %>
       </li>
     </ul>
-    <h2 class="title">Top 10 人氣餐廳</h2>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">最新餐廳</h3>
-        </div>
-        <div class="panel-body">
-          <% @ranking_restaurants.each do |restaurant| %>
-            <div class="info">
-              <h4 class="title"><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
-              <h6 class="subtitle"><%= restaurant.category.name %></h6>
-            </div>
-            <div class="clearfix"></div>
-            <p><%= restaurant.description %></p>
-            <hr>
+    <h2 class="title">Top 10 人氣餐廳<span>(收藏數最高)</span></h2>
+    <hr>
+      <% @ranking_restaurants.each do |restaurant| %>
+        <div class="col-md-4">
+          <%= link_to restaurant_path(restaurant) do %>
+            <% for img_id in 0..20 %>
+              <% if image_path(restaurant.image).include? ('/'+img_id.to_s+'.jpg') %>
+                <%= image_tag('/seed_img/'+img_id.to_s+'.jpg', class: "img-responsive center-block") %>
+              <% end %>
+            <% end %>
           <% end %>
         </div>
-      </div>
+        <div class="col-md-8">
+          <h4 class="small-title"><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
+          <p class="subtitle">收藏數：<%= restaurant.favorites.count %></p>
+          <div class="clearfix"></div>
+          <p class="content"><%= restaurant.description %></p>
+          <%= link_to "Show", restaurant_path(restaurant), class: "button" %>
+          <%= render partial: "shared/favorite", locals: { restaurant: restaurant} %>
+        </div>
+        <div class="clearfix"></div>
+      <% end %>
   </div>
 </div>
