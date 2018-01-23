@@ -147,11 +147,12 @@ _ 建立comment routes 以及comments controller
 
 - 建立favorite model
 - 設定user, restaurant, favorite的多對多的關係
-- 設定favorite, unfavorite routes 在restaurant下
-- 建立favorite, unfavorite action 在 restaurant controller裡
+- 設定favorite, unfavorite routes 在restaurant 下
+- 建立favorite, unfavorite action 在 restaurant controller 裡
 
 ##### 23/Jan/2018
 
 - 在 Restaurant Model 裡建立 is_favorited? 方法，檢查是否特定餐廳物件已有特定使用者的收藏紀錄
--製作partial, 使 restaurant index， show 共用button
--設定ranking route
+- 製作partial, 使 restaurant index， show 共用button
+- 設定ranking route
+- 新增欄位favorites_count 進入 restaurants table
