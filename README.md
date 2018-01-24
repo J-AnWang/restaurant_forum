@@ -167,3 +167,5 @@ _ 建立comment routes 以及comments controller
 
 - 建立followship model
 - 設定user 以及 followship的自關聯多對多關係
+- 設定美食達人專頁與追蹤 / 取消追蹤的路由
+- 產生FollowshipsController
