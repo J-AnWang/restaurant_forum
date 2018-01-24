@@ -169,3 +169,6 @@ _ 建立comment routes 以及comments controller
 - 設定user 以及 followship的自關聯多對多關係
 - 設定美食達人專頁與追蹤 / 取消追蹤的路由
 - 產生FollowshipsController
+- 新增 User index page以及 Follow 按鈕
+- 新增 Model 驗證，確保特定 user_id 下，只能有一個 followings_id
+- 新增 Followship Create Action，讓使用者可以追蹤其他使用者
