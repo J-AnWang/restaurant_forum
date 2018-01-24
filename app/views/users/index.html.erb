@@ -1,11 +1,34 @@
-<div class="container">
-  <ul>
-    <% @users.each do |user| %>
-      <li>
-        <%= user.name %>
-        <%= link_to "Follow", followships_path(following_id: user), method: :post %>
-        <%= link_to "Unfollow", followship_path(user), method: :delete %>
+<div id="foods-expert" class="container">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation">
+        <%= link_to "Home", restaurants_path %>
       </li>
+      <li role="presentation">
+        <%= link_to "Feeds", feeds_restaurants_path %>
+      </li>
+      <li role="presentation">
+        <%= link_to "Top10人氣餐廳", ranking_restaurants_path %>
+      </li>
+      <li role="presentation" class="active">
+        <%= link_to "美食達人", users_path %>
+      </li>
+    </ul>
+    <h2 class="title">美食達人</h2>
+    <hr>
+    <% @users.each do |user| %>
+      <div class="col-md-3 object">
+        <% for img_id in 0..5 %>
+          <% if image_path(user.avatar).include? ('/'+img_id.to_s+'.png') %>
+            <%= image_tag('/seed_img/'+img_id.to_s+'.png', class: "img-responsive center-block img-rounded img") %>
+          <% end %>
+        <% end %>
+        <p><%= user.name %></p>
+        <% if user != current_user %>
+          <%= render partial: "shared/follow", locals: {user: user} %>
+        <% end %>
+      </div>
     <% end %>
-  </ul>
+    <div class="clearfix"></div>
+  </div>
 </div>

@@ -333,6 +333,12 @@ a.button {
   p {
     color: #7e7e7e;
   }
+  .title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 15px;
+    text-align: left;
+  }
   .panel {
     a {
       padding: 0;
@@ -409,6 +415,33 @@ a.button {
     float: left;
     margin: 0;
     width: 20%;
+  }
+}
+// foods expert
+#foods-expert {
+  hr {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .col-md-3 {
+    margin-bottom: 30px;
+  }
+  .object {
+    text-align: center;
+    p {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+  .img {
+    max-height: 265px;
+    margin-bottom: 10px;
   }
 }
 // register

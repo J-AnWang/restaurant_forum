@@ -173,3 +173,5 @@ _ 建立comment routes 以及comments controller
 - 新增 Model 驗證，確保特定 user_id 下，只能有一個 followings_id
 - 新增 Followship create action，讓使用者可以追蹤其他使用者
 - 新增 Unfollow 按鈕以及 destroy action
+- 在 User Model 建立 following? 方法
+- 將 follow 按鈕程式碼提取成可重覆使用的 Partial
