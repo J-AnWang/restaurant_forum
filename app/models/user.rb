@@ -15,6 +15,9 @@ class User < ApplicationRecord
   # 「使用者喜愛很多餐廳」的多對多關聯
   has_many :likes, dependent: :destroy
   has_many :liked_restaurants, through: :likes, source: :restaurant
+  # 「使用者追蹤很多使用者」的多對多關聯
+  has_many :followships, dependent: :destroy
+  has_many :followings, through: :followships
 
   # 此method是從model中取出登入instance role的值來判斷是否為admin
   def admin?

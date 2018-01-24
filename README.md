@@ -166,3 +166,4 @@ _ 建立comment routes 以及comments controller
 ##### 24/Jan/2018
 
 - 建立followship model
+- 設定user 以及 followship的自關聯多對多關係
