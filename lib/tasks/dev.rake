@@ -66,4 +66,21 @@ namespace :dev do
     puts "have created fake favorites"
     puts "now you have #{Favorite.count} favorites' data"
   end
+
+  task fake_followship: :environment do
+    Followship.destroy_all
+
+    User.all.each do |user|
+      #where.not的用法，排除...,這裡確保不會自己加自己好友
+      @users = User.where.not(id: user.id).shuffle
+      5.times do
+        user.followships.create!(
+          following: @users.pop
+        )
+      end
+    end
+
+    puts "have created fake followship"
+    puts "now you have #{Followship.count} followships' data"
+  end
 end
