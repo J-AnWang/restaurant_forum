@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update]
 
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
@@ -29,7 +29,11 @@ Rails.application.routes.draw do
     end
 
   end
+
   resources :categories, only: :show
+
+  resources :followships, only: [:create, :destroy]
+
   root "restaurants#index"
 
   # 使用namespace來把前台後台分開
