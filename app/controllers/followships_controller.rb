@@ -10,4 +10,11 @@ class FollowshipsController < ApplicationController
     end
   end
 
+  def destroy
+    @followship = current_user.followships.where(following_id: params[:id]).first
+    @followship.destroy
+    flash[:alert] = "Followship was deleted!"
+    redirect_back fallback_location: users_path
+  end
+
 end
