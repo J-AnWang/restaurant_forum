@@ -175,3 +175,7 @@ _ 建立comment routes 以及comments controller
 - 新增 Unfollow 按鈕以及 destroy action
 - 在 User Model 建立 following? 方法
 - 將 follow 按鈕程式碼提取成可重覆使用的 Partial
+
+##### 25/Jan/2018
+
+- 在 user model 設定 has_many :followers
