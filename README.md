@@ -179,4 +179,4 @@ _ 建立comment routes 以及comments controller
 ##### 25/Jan/2018
 
 - 在 user model 設定 has_many :followers
-- 在 user show 頁面顯示已經被使用者收藏的餐廳
+- 在 user show 頁面顯示已經被使用者收藏的餐廳,自己去追蹤的人以及追蹤自己的人

@@ -1,5 +1,6 @@
 <div id="profile-show" class="container">
   <div class="row">
+
     <div class="profile">
       <div class="col-md-4 col-xs-12">
         <% for img_id in 0..5 %>
@@ -11,6 +12,12 @@
       <div class="col-md-8 col-xs-12">
         <h2 class="title"><%= @user.name %></h2>
         <h5><%= @user.email %></h5>
+        <strong>
+          <span><%= @commented_restaurants.count %> 已評論過的餐廳</span>
+          <span><%= @favorited_restaurants.count %> 收藏的餐廳</span>
+          <span><%= @followings.count %> followings</span>
+          <span><%= @followers.count %> followers</span>
+        </strong>
         <div><%= simple_format @user.intro %></div>
         <div>
           <% if @user.email == current_user.email %>
@@ -22,7 +29,48 @@
       <div class="clearfix"></div>
     </div>
     <hr>
-    <div class="col-md-3"></div>
+
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= @followings.count %> followings</h3>
+        </div>
+        <div class="panel-body">
+          <% @followings.each do |user| %>
+            <div class="my-user">
+              <%= link_to user_path(user) do %>
+              <% for img_id in 0..5 %>
+                <% if image_path(user.avatar).include? ('/'+img_id.to_s+'.png') %>
+                  <%= image_tag('/seed_img/'+img_id.to_s+'.png', class: "img-responsive center-block img-rounded") %>
+                <% end %>
+              <% end %>
+              <strong><%= user.name %></strong>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @followers.count %> followers</h3>
+      </div>
+      <div class="panel-body">
+        <% @followers.each do |user| %>
+          <div class="my-user">
+            <%= link_to user_path(user) do %>
+            <% for img_id in 0..5 %>
+              <% if image_path(user.avatar).include? ('/'+img_id.to_s+'.png') %>
+                <%= image_tag('/seed_img/'+img_id.to_s+'.png', class: "img-responsive center-block img-rounded") %>
+              <% end %>
+            <% end %>
+            <strong><%= user.name %></strong>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+    </div>
+
     <div class="col-md-9">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -43,8 +91,8 @@
         <% end %>
         <div class="clearfix"></div>
       </div>
-    </div>
-    <div class="panel panel-default">
+      </div>
+      <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><%= @favorited_restaurants.count %>收藏的餐廳</h3>
       </div>
@@ -63,7 +111,7 @@
       <% end %>
       <div class="clearfix"></div>
     </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
