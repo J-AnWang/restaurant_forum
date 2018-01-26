@@ -1,0 +1,17 @@
+<div id="friends" class="container">
+  <div class="row">
+    <h2 class="title">all friends</h2>
+    <% @friends.each do |friend| %>
+      <div class="col-md-4">
+        <%= link_to user_path(friend) do %>
+        <% for img_id in 0..5 %>
+          <% if image_path(friend.avatar).include? ('/'+img_id.to_s+'.png') %>
+            <%= image_tag('/seed_img/'+img_id.to_s+'.png', class: "img-responsive center-block img-rounded img") %>
+          <% end %>
+        <% end %>
+        <p><%= friend.name %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

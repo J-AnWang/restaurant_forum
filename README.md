@@ -198,3 +198,4 @@ _ 建立comment routes 以及comments controller
 - 建立 dev:fake_friendship 去產生假的好友資料
 - 在 user model 設定 has_many :friends
 - 設定 users/friend_list route
+- 建立 users friend_list 頁面

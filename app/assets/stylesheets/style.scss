@@ -466,6 +466,17 @@ a.button {
     margin-bottom: 10px;
   }
 }
+// friend_list
+#friends {
+    p {
+      width: 50%;
+      margin: 20px auto 10px;
+      text-align: center;
+    }
+    .img {
+      height: 250px;
+    }
+}
 // register
 #regist {
   margin-top: 170px;
