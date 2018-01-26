@@ -190,3 +190,6 @@ _ 建立comment routes 以及comments controller
 - 建立friendship model
 - 設定user 以及 friendship的自關聯多對多關係
 - 設定加好友 / 取消好友的路由
+- 新增 Model 驗證，確保特定 user_id 下，只能有一個 friendship_id
+- 新增 friendship create action，讓使用者可以加其他使用者為好友
+- 新增 Unfriend按鈕以及 destroy action
