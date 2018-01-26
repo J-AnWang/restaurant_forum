@@ -193,3 +193,5 @@ _ 建立comment routes 以及comments controller
 - 新增 Model 驗證，確保特定 user_id 下，只能有一個 friendship_id
 - 新增 friendship create action，讓使用者可以加其他使用者為好友
 - 新增 Unfriend按鈕以及 destroy action
+- 在 User Model 建立 friending? 方法
+- 將 friending 按鈕程式碼提取成可重覆使用的 Partial
