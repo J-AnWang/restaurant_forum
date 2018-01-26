@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, only: [:index, :show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update] do
+
+    member do
+
+      get :friend_list
+
+    end
+
+  end
 
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
@@ -33,6 +41,8 @@ Rails.application.routes.draw do
   resources :categories, only: :show
 
   resources :followships, only: [:create, :destroy]
+
+  resources :friendships, only: [:create, :destroy]
 
   root "restaurants#index"
 

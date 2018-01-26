@@ -55,6 +55,10 @@ Rails完成餐廳評論網
 
 * 建立好友功能
 
+    1.使用者可以加入好友
+    2.使用者可以取消加入達人
+    3.使用者可以在特定頁面看到所有好友資料
+
 ### 執行時間
 
 ##### 9/Jan/2018
@@ -180,3 +184,18 @@ _ 建立comment routes 以及comments controller
 
 - 在 user model 設定 has_many :followers
 - 在 user show 頁面顯示已經被使用者收藏的餐廳,自己去追蹤的人以及追蹤自己的人
+
+##### 26/Jan/2018
+
+- 建立friendship model
+- 設定user 以及 friendship的自關聯多對多關係
+- 設定加好友 / 取消好友的路由
+- 新增 Model 驗證，確保特定 user_id 下，只能有一個 friendship_id
+- 新增 friendship create action，讓使用者可以加其他使用者為好友
+- 新增 Unfriend按鈕以及 destroy action
+- 在 User Model 建立 friending? 方法
+- 將 friending 按鈕程式碼提取成可重覆使用的 Partial
+- 建立 dev:fake_friendship 去產生假的好友資料
+- 在 user model 設定 has_many :friends
+- 設定 users/friend_list route
+- 建立 users friend_list 頁面

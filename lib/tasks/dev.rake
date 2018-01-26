@@ -83,4 +83,20 @@ namespace :dev do
     puts "have created fake followship"
     puts "now you have #{Followship.count} followships' data"
   end
+
+  task fake_friendship: :environment do |t|
+    Friendship.destroy_all
+
+    User.all.each do |user|
+      @users = User.where.not( id: user.id).shuffle
+      5.times do
+        user.friendships.create!(
+          friending: @users.pop
+        )
+      end
+    end
+
+    puts "have created fake friendship"
+    puts "now you have #{Friendship.count} friendships' data"
+  end
 end

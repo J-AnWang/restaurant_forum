@@ -15,13 +15,20 @@ class User < ApplicationRecord
   # 「使用者喜愛很多餐廳」的多對多關聯
   has_many :likes, dependent: :destroy
   has_many :liked_restaurants, through: :likes, source: :restaurant
+
   # 「使用者追蹤很多使用者」的多對多關聯
   has_many :followships, dependent: :destroy
   has_many :followings, through: :followships
-
   # 「使用者被很多使用者追蹤」的多對多關聯
   has_many :inverse_followships, class_name: "Followship", foreign_key: :following_id
   has_many :followers, through: :inverse_followships, source: :user
+
+  # 「使用者加入很多使用者為好友」的多對多關聯
+  has_many :friendships, dependent: :destroy
+  has_many :friendings, through: :friendships
+  # 「使用者被很多使用者追蹤加入為好友」的多對多關聯
+  has_many :inverse_friendships, class_name: "Friendship", foreign_key: :friending_id
+  has_many :friends, through: :inverse_friendships, source: :user
 
   # 此method是從model中取出登入instance role的值來判斷是否為admin
   def admin?
@@ -30,5 +37,13 @@ class User < ApplicationRecord
 
   def following?(user)
     self.followings.include?(user)
+  end
+
+  def friending?(user)
+    self.friendings.include?(user)
+  end
+
+  def all_friends
+    (self.friendings + self.friends).uniq
   end
 end
