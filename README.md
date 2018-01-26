@@ -196,3 +196,4 @@ _ 建立comment routes 以及comments controller
 - 在 User Model 建立 friending? 方法
 - 將 friending 按鈕程式碼提取成可重覆使用的 Partial
 - 建立 dev:fake_friendship 去產生假的好友資料
+- 在 user model 設定 has_many :friends
