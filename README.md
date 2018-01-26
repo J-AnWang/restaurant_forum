@@ -189,3 +189,4 @@ _ 建立comment routes 以及comments controller
 
 - 建立friendship model
 - 設定user 以及 friendship的自關聯多對多關係
+- 設定加好友 / 取消好友的路由
