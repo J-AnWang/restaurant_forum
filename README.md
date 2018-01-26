@@ -188,3 +188,4 @@ _ 建立comment routes 以及comments controller
 ##### 26/Jan/2018
 
 - 建立friendship model
+- 設定user 以及 friendship的自關聯多對多關係
